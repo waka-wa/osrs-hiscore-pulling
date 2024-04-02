@@ -6,6 +6,6 @@
     "osrs-json-hiscores": "^2.18.0"
   },
   "scripts": {
-    "start": "node express.js"
+    "start": "node index.js"
   }
 }
