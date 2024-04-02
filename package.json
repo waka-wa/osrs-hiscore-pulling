@@ -1,5 +1,11 @@
 {
+  "name": "osrs-hiscore-pulling",
+  "version": "1.0.0",
   "dependencies": {
+    "express": "^4.17.1",
     "osrs-json-hiscores": "^2.18.0"
+  },
+  "scripts": {
+    "start": "node express.js"
   }
 }
