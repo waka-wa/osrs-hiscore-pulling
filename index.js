@@ -11,9 +11,10 @@ app.get('/stats/:username', async (req, res) => {
     const stats = await getStatsByGamemode(username);
 
     if (skill) {
-      const skillExp = stats.skills[skill]?.experience;
+      const skillKey = skill.toLowerCase();
+      const skillExp = stats.skills[skillKey]?.xp;
       if (skillExp !== undefined) {
-        res.json({ username, skill, experience: skillExp });
+        res.json({ username, skill: skillKey, experience: skillExp });
       } else {
         res.status(400).json({ error: 'Invalid skill name' });
       }
